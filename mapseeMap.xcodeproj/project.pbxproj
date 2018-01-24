@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BDE35C54F77B26A338C0E47 /* Pods_mapseeMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E377D0A26123AF27E486AFE /* Pods_mapseeMap.framework */; };
 		F22FAE3920178C54005E79B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22FAE3820178C54005E79B0 /* AppDelegate.swift */; };
 		F22FAE3B20178C54005E79B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22FAE3A20178C54005E79B0 /* ViewController.swift */; };
 		F22FAE3E20178C54005E79B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22FAE3C20178C54005E79B0 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45D6D51EEEAE747A98E69FBE /* Pods-mapseeMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mapseeMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mapseeMap/Pods-mapseeMap.debug.xcconfig"; sourceTree = "<group>"; };
+		5EF3BD2C21EACFE90F515FB0 /* Pods-mapseeMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mapseeMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-mapseeMap/Pods-mapseeMap.release.xcconfig"; sourceTree = "<group>"; };
+		6E377D0A26123AF27E486AFE /* Pods_mapseeMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mapseeMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22FAE3520178C54005E79B0 /* mapseeMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mapseeMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22FAE3820178C54005E79B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F22FAE3A20178C54005E79B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDE35C54F77B26A338C0E47 /* Pods_mapseeMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00092A46446C96F8AD8195B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45D6D51EEEAE747A98E69FBE /* Pods-mapseeMap.debug.xcconfig */,
+				5EF3BD2C21EACFE90F515FB0 /* Pods-mapseeMap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		667136B83E273FB51BCFBD79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E377D0A26123AF27E486AFE /* Pods_mapseeMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F22FAE2C20178C54005E79B0 = {
 			isa = PBXGroup;
 			children = (
 				F22FAE3720178C54005E79B0 /* mapseeMap */,
 				F22FAE3620178C54005E79B0 /* Products */,
+				00092A46446C96F8AD8195B3 /* Pods */,
+				667136B83E273FB51BCFBD79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F22FAE4720178C54005E79B0 /* Build configuration list for PBXNativeTarget "mapseeMap" */;
 			buildPhases = (
+				B06F6904057758B4B362D346 /* [CP] Check Pods Manifest.lock */,
 				F22FAE3120178C54005E79B0 /* Sources */,
 				F22FAE3220178C54005E79B0 /* Frameworks */,
 				F22FAE3320178C54005E79B0 /* Resources */,
+				5AC321FD05174F6B75A4F034 /* [CP] Embed Pods Frameworks */,
+				1C8246CD314C78F71D0D0B0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C8246CD314C78F71D0D0B0F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mapseeMap/Pods-mapseeMap-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mapseeMap/Pods-mapseeMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AC321FD05174F6B75A4F034 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mapseeMap/Pods-mapseeMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B06F6904057758B4B362D346 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mapseeMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F22FAE3120178C54005E79B0 /* Sources */ = {
@@ -272,6 +354,7 @@
 		};
 		F22FAE4820178C54005E79B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45D6D51EEEAE747A98E69FBE /* Pods-mapseeMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +370,7 @@
 		};
 		F22FAE4920178C54005E79B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF3BD2C21EACFE90F515FB0 /* Pods-mapseeMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
